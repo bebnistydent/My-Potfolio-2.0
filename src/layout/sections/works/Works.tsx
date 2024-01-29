@@ -19,8 +19,8 @@ export const Works = () => {
             <Menu menuItems={worksItems} />
             <FlexBox justify={"space-around"}>
 
-            <WorksContent title={"Social Network"} src={socialImage} text={"Text"}  />
-            <WorksContent title={"Timer"} src={timerlImage} text={"Text"} />
+            <WorksContent title={"Social Network"} src={socialImage} text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim!"}  />
+            <WorksContent title={"Timer"} src={timerlImage} text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim!"} />
 
             </FlexBox>
 
