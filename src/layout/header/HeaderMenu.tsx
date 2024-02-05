@@ -86,7 +86,7 @@ color: ${theme.colors.accent};
 const ListItem = styled.li`
 position: relative;
 
-&:: before {
+&::before {
     content: "";
     display: inline-block;
     height: 3px;
@@ -101,8 +101,8 @@ position: relative;
     transform: scale(0);
 }
 
-&: hover {
-     &:: before {
+&:hover {
+     &::before {
         transform: scale(1);
      }
 
