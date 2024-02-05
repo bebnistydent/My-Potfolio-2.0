@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
-import { Icon } from "../../../assets/components/icon/Icon";
 import { SectionTitle } from "../../../assets/components/conteiner/Section.Title";
 import { Skill } from "./skill/Skill.box";
+import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
 
 
 export const Skills = () => {
     return (
 
        <SkillsSection>
+
+              <Conteiner> 
        
        <SectionTitle>My Skills</SectionTitle>
 
@@ -44,15 +46,15 @@ export const Skills = () => {
 
        </FlexBox>
 
+       </Conteiner>
+       
        </SkillsSection>
 
     );
 };
 
 
-const SkillsSection = styled.section `
-background-color: pink;
-min-height: 100vh;
-    
+const SkillsSection = styled.section ` 
+
 `
 
