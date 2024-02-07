@@ -36,7 +36,7 @@ padding: 62px 20px 40px;
 
     
 `
-const IconBox = styled.div`
+export const IconBox = styled.div`
     position: relative;
 
     &::before {
