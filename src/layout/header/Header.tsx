@@ -4,6 +4,7 @@ import { Logo } from "../../assets/components/logo/Logo";
 import { Conteiner } from "../../assets/components/conteiner/Conteiner";
 import { FlexBox } from "../../assets/components/conteiner/Flex.box";
 import { HeaderMenu } from "./HeaderMenu";
+import { ModileMenu } from "./MobileMenu";
 
 const items = ["Home","Skils","Works","Testimony","Contact"];
 
@@ -18,6 +19,7 @@ export const Header = () => {
                <Logo />
 
                <HeaderMenu menuItems={items} />
+               <ModileMenu menuItems={items} />
       </FlexBox>
      </Conteiner>
     
