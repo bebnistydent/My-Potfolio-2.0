@@ -36,8 +36,8 @@ export const WorksContent = (props:WorksContentPropsType) => {
 
 const StyledWorksCell = styled.div `
 background-color: ${theme.colors.secondaryBg};
-max-width: 540px;
-width: 100%;
+width: 330px;
+flex-grow: 1;
 
 ${Link} {
 padding: 10px 0;
@@ -46,7 +46,11 @@ padding: 10px 0;
     margin-left: 20px;
 }
 }
-    
+   
+    @media ${theme.media.desktop} {
+        max-width: 540px;
+    }
+   
 `
 
 const Image = styled.img `
@@ -74,14 +78,7 @@ const ImageWrapper = styled.div`
    
 
     &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    top:0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
+    opacity: 1;
         
     }
  
@@ -106,5 +103,36 @@ const ImageWrapper = styled.div`
         
     };
   }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+        
+    }
+  
+
+    @media ${theme.media.tablet} {
+        &:hover{
+   
+
+   &::before {
+   opacity: 1;
+       
+   }
+
+   ${Button} {
+   opacity: 1;
+  }
+
+ }
+    }
     
 `
