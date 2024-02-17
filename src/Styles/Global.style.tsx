@@ -41,6 +41,11 @@ body {
 
   section {
     padding: 100px 0;
+
+    @media ${theme.media.mobile} {
+      padding: 80px 0;
+    }
+
   }
 
 section:nth-of-type(odd) {

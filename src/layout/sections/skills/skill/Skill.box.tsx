@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../../assets/components/icon/Icon";
 import { FlexBox } from "../../../../assets/components/conteiner/Flex.box";
+import { theme } from "../../../../Styles/Theme";
 
 
 
@@ -31,8 +32,13 @@ export const Skill = (props:SkillPropsType ) => {
 
 
 const StyledSkill = styled.div `
-width: 380px;
+width: 330px;
 padding: 62px 20px 40px;
+flex-grow: 1;
+
+@media ${theme.media.mobile} {
+    padding: 62px 0 40px;
+}
 
     
 `
