@@ -12,13 +12,13 @@ export const ModileMenu = (props:{menuItems:Array<string>}) => {
 
         <StyledMobileMenu>
 
-             <BurgerButton isOpen={true}>
+             <BurgerButton isOpen={false}>
 
               <span></span>
 
              </BurgerButton>
 
-    <MobileMenuPopup isOpen={true}> 
+    <MobileMenuPopup isOpen={false}> 
     <ul>
 
           {props.menuItems.map((item:string, index: number) =>{

@@ -120,8 +120,7 @@ const ImageWrapper = styled.div`
   
 
     @media ${theme.media.tablet} {
-        &:hover{
-   
+        
 
    &::before {
    opacity: 1;
@@ -132,7 +131,7 @@ const ImageWrapper = styled.div`
    opacity: 1;
   }
 
- }
+ 
     }
     
 `

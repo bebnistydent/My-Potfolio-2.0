@@ -5,12 +5,15 @@ import { Icon } from "../../../assets/components/icon/Icon";
 import { Slider } from "../../../assets/components/slider/Slider";
 import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
 import { IconBox } from "../skills/skill/Skill.box";
+import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
 
 
 
 export const Testimony = () => {
     return (
      <StyledTestimony>
+        
+        <Conteiner> 
 
         <SectionTitle>Testimony</SectionTitle>
 
@@ -23,6 +26,9 @@ export const Testimony = () => {
         <Slider /> 
 
         </FlexBox>
+
+        </Conteiner>
+        
      </StyledTestimony>
 
     );
