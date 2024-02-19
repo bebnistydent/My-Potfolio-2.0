@@ -9,6 +9,7 @@ export const Button = styled.button `
   text-transform: uppercase;
   width: 170px;
   height: 32px;
+  
 
   position: relative;
   z-index: 1;
@@ -17,7 +18,7 @@ export const Button = styled.button `
     &::before{
         height: 100%;
         width:100%;
-        z-index: -1;
+       
     }
   }
 
@@ -32,7 +33,7 @@ export const Button = styled.button `
    bottom: 0;
    left: 50%;
    transform: translateX(-50%);
-   
+   z-index: -1;
   }
 
     

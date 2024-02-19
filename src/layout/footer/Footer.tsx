@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Icon } from "../../assets/components/icon/Icon";
 import { FlexBox } from "../../assets/components/conteiner/Flex.box";
 import { theme } from "../../Styles/Theme";
+import { font } from "../../Styles/Common";
 
 
 export const Footer = () => {
@@ -55,10 +56,14 @@ const StyledFooter = styled.footer `
 
 `
 const Name = styled.span `
+    
+    ${font({family: "'Poppins', sans-serif", weight: 700, Fmax: 22, Fmin: 16})}
+
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
     font-size: 22px;
     letter-spacing: 3px;
+
 `
 
 const SotialsList = styled.ul `

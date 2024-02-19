@@ -41,7 +41,7 @@ const  StyledTabMenu = styled.nav `
         max-width: 352px;
         width: 100%;
         margin:0 auto 40px;
-        border: 1px solid red;
+    
     }
 `
 
