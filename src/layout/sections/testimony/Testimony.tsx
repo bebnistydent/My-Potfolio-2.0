@@ -4,12 +4,12 @@ import { SectionTitle } from "../../../assets/components/conteiner/Section.Title
 import { Icon } from "../../../assets/components/icon/Icon";
 import { Slider } from "../../../assets/components/slider/Slider";
 import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
-import { IconBox } from "../skills/skill/Skill.box";
 import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
+import { S } from "../skills/skill/Skill.box_styles";
 
 
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
      <StyledTestimony>
         
@@ -19,9 +19,9 @@ export const Testimony = () => {
 
         <FlexBox direction={"column"} align={"center"}>
 
-        <IconBox> 
+        <S.IconBox> 
         <Icon iconid = {"testimony"} />
-        </IconBox>
+        </S.IconBox>
         
         <Slider /> 
 
@@ -39,7 +39,7 @@ const StyledTestimony = styled.section `
   background-color: #73eb73;
   min-height: 50vh;
 
-  ${IconBox} {
+  ${S.IconBox} {
     margin: 40px 0 72px;
   }
 

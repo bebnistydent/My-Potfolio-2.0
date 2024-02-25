@@ -5,6 +5,9 @@ import { css } from "styled-components";
 
 
 //All Menu styles
+
+
+//Major menu
 const Link = styled.a`
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -69,7 +72,7 @@ const MenuItem = styled.li`
 //MobileMenu Styles
 const MobileMenu = styled.nav`
  
-`;
+`
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
 
@@ -165,7 +168,14 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-
+//DesctopMenu
+const DesctopMenu = styled.nav`
+  ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+` 
 export const S = {
   Link,
   Mask,
@@ -173,4 +183,5 @@ export const S = {
   MobileMenu,
   BurgerButton,
   MobileMenuPopup,
+  DesctopMenu,
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import IconsSprite from "../../images/icons-sprite.svg"
 
 
@@ -12,7 +11,7 @@ type IconPropsType = {
 
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
     return (
         
 

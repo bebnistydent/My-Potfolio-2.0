@@ -6,7 +6,7 @@ import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
 import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
 
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
     return (
         <StyledSlogan>
 

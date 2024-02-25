@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "../../../assets/components/styled.link/Link";
-import { theme } from "../../../Styles/Theme";
 import { Button } from "../../../assets/components/button/Button";
+import { S } from "./Works_Styles";
 
 
 type WorksContentPropsType = {
@@ -13,125 +12,24 @@ type WorksContentPropsType = {
 }
 
 
-export const WorksContent = (props:WorksContentPropsType) => {
+export const WorksContent: React.FC<WorksContentPropsType> = (props:WorksContentPropsType) => {
     return (
-        <StyledWorksCell>
+        <S.WorksCell>
 
-            <ImageWrapper> 
-          <Image src={props.src} alt="" />
+            <S.ImageWrapper> 
+          <S.Image src={props.src} alt="" />
           <Button>VIEW PROJECT</Button>
-          </ImageWrapper>
+          </S.ImageWrapper>
 
-          <PaddingWrap> 
-          <Title>{props.title}</Title>
-          <Text>{props.text}</Text>
+          <S.PaddingWrap> 
+          <S.Title>{props.title}</S.Title>
+          <S.Text>{props.text}</S.Text>
           <Link href={"#"}>demo</Link>
           <Link href={"#"}>code</Link>
-          </PaddingWrap>
+          </S.PaddingWrap>
 
-        </StyledWorksCell>
+        </S.WorksCell>
     )
 }
 
 
-const StyledWorksCell = styled.div `
-background-color: ${theme.colors.secondaryBg};
-width: 330px;
-flex-grow: 1;
-
-${Link} {
-padding: 10px 0;
-
-& + ${Link} {
-    margin-left: 20px;
-}
-}
-   
-    @media ${theme.media.desktop} {
-        max-width: 540px;
-    }
-   
-`
-
-const Image = styled.img `
-width: 100%;
-height: 260px;
-object-fit: cover;
-    
-`
-
-
-const Title = styled.h3 `
-    
-`
-const Text = styled.p `
-    margin: 14px 0 10px;
-`
-
-const PaddingWrap = styled.div`
-    padding: 25px 20px;
-`
-const ImageWrapper = styled.div`
-  position: relative;
-
- &:hover{
-   
-
-    &::before {
-    opacity: 1;
-        
-    }
- 
-    ${Button} {
-    opacity: 1;
-   }
-
-  }
-
-  ${Button} {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-
-    &::before{
-        width: 100%;
-        height: 100%;
-        
-        
-    };
-  }
-
-
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    top:0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-        
-    }
-  
-
-    @media ${theme.media.tablet} {
-        
-
-   &::before {
-   opacity: 1;
-       
-   }
-
-   ${Button} {
-   opacity: 1;
-  }
-
- 
-    }
-    
-`

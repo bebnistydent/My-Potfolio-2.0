@@ -1,24 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import { theme } from "../../../Styles/Theme";
 import { Menu } from "./Menu";
+import { S } from "./Header.Menu_Styles";
 
 export const DesctopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
   menuItems: Array<string>;
 }) => {
   return (
-    <StyledDesctopMenu>
+    <S.DesctopMenu>
       <Menu menuItems={props.menuItems} />
-    </StyledDesctopMenu>
+    </S.DesctopMenu>
   );
 };
 
-const StyledDesctopMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
+
 
   
-`;
+
