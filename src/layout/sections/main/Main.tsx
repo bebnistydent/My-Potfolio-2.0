@@ -3,6 +3,7 @@ import photo from "./../../../assets/images/PhotoOfMine.webp";
 import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
 import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
 import { S } from "./Main_styles";
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -16,7 +17,20 @@ export const Main: React.FC = () => {
             <S.MyName>
               I am <span>Nikita Yerameyeu</span>
             </S.MyName>
-            <S.MainTitle>A Web Developer.</S.MainTitle>
+            
+            <S.MainTitle>
+                
+                <p>A Web Developer.</p>
+            <Typewriter
+            options={{
+            strings: ['A Web Developer','A Frontend Developer.'],
+            autoStart: true,
+            loop: true,
+            delay: 90,
+                    }}
+                    />
+
+            </S.MainTitle>
           </div>
 
           <S.PhotoLine>
