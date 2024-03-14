@@ -6,7 +6,7 @@ import { DesctopMenu } from "./headerMenu/DesctopMenu";
 import { ModileMenu } from "./headerMenu/MobileMenu";
 import { S } from "./Header_Styles";
 
-const items = ["Home", "Skils", "Works", "Testimony", "Contact"];
+
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -24,11 +24,10 @@ export const Header: React.FC = () => {
         <Conteiner>
           <FlexBox justify={"space-between"} align={"center"}>
             <Logo />
-            {width < breakpoint ? 
-              <ModileMenu menuItems={items} />
-             : 
-              <DesctopMenu menuItems={items} />
+            {width < breakpoint ? <ModileMenu />
+                                : <DesctopMenu />
             }
+            
           </FlexBox>
         </Conteiner>
       </S.Header>

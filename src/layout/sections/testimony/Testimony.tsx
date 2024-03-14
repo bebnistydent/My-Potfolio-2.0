@@ -11,7 +11,7 @@ import { S } from "../skills/skill/Skill.box_styles";
 
 export const Testimony: React.FC = () => {
     return (
-     <StyledTestimony>
+     <StyledTestimony id={"testimony"}>
         
         <Conteiner> 
 
