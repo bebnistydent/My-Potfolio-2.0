@@ -37,6 +37,7 @@ const SocialIconLink = styled.a `
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: ${theme.animation.transition};
 
     color: ${theme.colors.accent};
 
