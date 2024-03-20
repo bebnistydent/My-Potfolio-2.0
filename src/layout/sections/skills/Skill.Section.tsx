@@ -4,7 +4,8 @@ import { FlexBox } from "../../../assets/components/conteiner/Flex.box";
 import { SectionTitle } from "../../../assets/components/conteiner/Section.Title";
 import { Skill } from "./skill/Skill.box";
 import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
-import {S} from "./skill/Skill.box_styles" 
+import {S} from "./skill/Skill.box_styles";
+import { Fade } from "react-awesome-reveal";
 
 
 const skillData = [
@@ -65,11 +66,13 @@ export const Skills = () => {
 
        <FlexBox wrap={"wrap"} justify={"space-between"}>
 
+       <Fade cascade={true} damping={0.2}>
               {skillData.map((s:{description: string, Iconid: string, title: string}, index: number)=> {
               return <Skill Iconid = {s.Iconid} key={index}
                             title = {s.title} 
                             description={s.description} />
               })}
+       </Fade>
 
        </FlexBox>
 
