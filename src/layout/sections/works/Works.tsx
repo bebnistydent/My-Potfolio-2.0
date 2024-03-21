@@ -8,6 +8,7 @@ import timerlImage from "./../../../assets/images/proj-2.webp"
 import { Conteiner } from "../../../assets/components/conteiner/Conteiner";
 import { S } from "./Works_Styles";
 import { TabsStatusType } from "./tab.menu/Tab.Menu";
+import { AnimatePresence, motion } from "framer-motion"
 
 
 
@@ -40,6 +41,7 @@ const worksData = [
         src: socialImage,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim!",
         type: "spa",
+        id: 1
     },
 
     {
@@ -47,6 +49,7 @@ const worksData = [
         src: timerlImage,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim!",
         type: "react",
+        id: 2
 
     },
 ]
@@ -70,6 +73,8 @@ export const Works: React.FC = () => {
             filteredWorks = worksData.filter(work => work.type === "spa")
         }
 
+      
+
         function changeFilterStatus(value: TabsStatusType) {
                 setCurrentFilterStatus(value)
         }
@@ -84,12 +89,31 @@ export const Works: React.FC = () => {
                      currentFilterStatus={currentFilterStatus} />
             <FlexBox justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
 
-                {filteredWorks.map((w: {title: string, src: any, text: string}) =>{
-                    return <WorksContent 
+            <AnimatePresence>
+                {filteredWorks.map((w: {title: string, src: any, text: string, id:number}) =>{
+                    return (  
+                           <motion.div style={
+                             {width: "400px",
+                            flexGrow: 1,
+                            maxWidth: "540px"}
+                    
+                           }
+                           layout={true}
+                           initial={{ opacity: 0 }}
+                           animate={{ opacity: 1 }}
+                           exit={{ opacity: 0 }}
+                           key={w.id}
+                            > 
+                           <WorksContent 
                             title={w.title} 
                             src={w.src} 
-                            text={w.text}  />
+                            text={w.text}
+                            key={w.id}
+                            />
+                            </motion.div>
+                    )    
                 })}
+            </AnimatePresence>
 
             
             </FlexBox>

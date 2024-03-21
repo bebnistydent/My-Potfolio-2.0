@@ -8,6 +8,7 @@ type WorksContentPropsType = {
     title: string
     text: string
     src: string
+    
 
 }
 
